@@ -9,7 +9,7 @@ const danceForms = [
   {
     title: "BHARATANATYAM",
     description: `Bharatanatyam is a classical Indian dance form known for its intricate footwork, expressive gestures, and spiritual themes. It's one of the eight recognized Indian classical dance forms.`,
-    image: "/Image/bharat.JPG",
+    image: "/Image/bharat.jpg",
   },
   {
     title: "KATHAK",

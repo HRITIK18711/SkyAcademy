@@ -1,16 +1,16 @@
 import React from 'react';
 
 const images = [
-    { image: `/Image/Ramaya/01.JPG`},
-      { image: `/Image/Ramaya/02.JPG` },
-      { image: `/Image/Ramaya/03.JPG` },
-      { image: `/Image/Ramaya/04.JPG` },
-      { image: `/Image/Ramaya/05.JPG` },
-      { image: `/Image/Ramaya/06.JPG` },
-      { image: `/Image/Ramaya/07.JPG` },
-      { image: `/Image/Ramaya/08.JPG` },
-      { image: `/Image/Ramaya/09.JPG` },
-      { image: `/Image/Ramaya/10.JPG` }];
+    { image: `/Image/Ramaya/01.jpg`},
+    { image: `/Image/Ramaya/02.jpg` },
+    { image: `/Image/Ramaya/03.jpg` },
+    { image: `/Image/Ramaya/04.jpg` },
+    { image: `/Image/Ramaya/05.jpg` },
+    { image: `/Image/Ramaya/06.jpg` },
+    { image: `/Image/Ramaya/07.jpg` },
+    { image: `/Image/Ramaya/08.jpg` },
+    { image: `/Image/Ramaya/09.jpg` },
+    { image: `/Image/Ramaya/10.jpg` }];
 export default function Ramaya({ onBack }) {
 
 

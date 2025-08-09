@@ -1,16 +1,16 @@
 import React from 'react'
 const images = [
-      { image: `/Image/Jai_Jawan/01.JPG` },
-      { image: `/Image/Jai_Jawan/02.JPG` },
-      { image: `/Image/Jai_Jawan/03.JPG` },
-      { image: `/Image/Jai_Jawan/04.JPG` },
-      { image: `/Image/Jai_Jawan/05.JPG` },
-      { image: `/Image/Jai_Jawan/06.JPG` },
-      { image: `/Image/Jai_Jawan/07.JPG` },
-      { image: `/Image/Jai_Jawan/08.JPG` },
-      { image: `/Image/Jai_Jawan/09.JPG` },
-      { image: `/Image/Jai_Jawan/10.JPG` },
-      { image: `/Image/Jai_Jawan/11.JPG` }
+      { image: `/Image/Jai_Jawan/01.jpg`},
+      { image: `/Image/Jai_Jawan/02.jpg`},
+      { image: `/Image/Jai_Jawan/03.jpg`},
+      { image: `/Image/Jai_Jawan/04.jpg`},
+      { image: `/Image/Jai_Jawan/05.jpg`},
+      { image: `/Image/Jai_Jawan/06.jpg`},
+      { image: `/Image/Jai_Jawan/07.jpg`},
+      { image: `/Image/Jai_Jawan/08.jpg`},
+      { image: `/Image/Jai_Jawan/09.jpg`},
+      { image: `/Image/Jai_Jawan/10.jpg`},
+      { image: `/Image/Jai_Jawan/11.jpg`},
     ];
 export default function Jai_Jawan({ onBack }) {
  return (

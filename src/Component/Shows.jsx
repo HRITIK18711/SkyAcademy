@@ -7,7 +7,7 @@ import Virangna from './Virangna';
 const shows = [
   { title: 'Ramaya', image: '/Image/Ramaya_Banner.jpg' },
   { title: 'Mahabharat', image: '/Image/Mahabharat/13.jpg' },
-  { title: 'Jai Jawan Jai Kisan', image: '/Image/Jai_Jawan/11.JPG' },
+  { title: 'Jai Jawan Jai Kisan', image: '/Image/Jai_Jawan/11.jpg' },
   { title: 'Virranga', image: '/Image/Virangna/(1).jpg' },
   { title: 'Holi Fest', image: '/Image/Extra/(5).jpg' },
 ];
