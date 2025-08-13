@@ -32,7 +32,7 @@ export default function Shows({ onBack }) {
     return <Virangna onBack={() => setSelectedCard(null)} />;
   }
 
-  if (selectedCard === 'Dandiya Fest') {
+  if (selectedCard === 'Holi Fest') {
     return <Holi_fest onBack={() => setSelectedCard(null)} />;
   }
 
