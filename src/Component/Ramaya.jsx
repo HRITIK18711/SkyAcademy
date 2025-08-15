@@ -13,7 +13,7 @@ const images = [
   { image: `/Image/Ramaya/10.jpg` }
 ];
 
-export default function Ramaya({ onBack }) {
+export default function Ramaya({ onBack }) { 
   return (
     <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen">
       

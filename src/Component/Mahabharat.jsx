@@ -12,7 +12,7 @@ const images = [
       { image: `/Image/Mahabharat/10.jpg`  },
       { image: `/Image/Mahabharat/12.jpg`  },
       { image: `/Image/Mahabharat/13.jpg`  }
-    ];
+    ]; 
 
 export default function Mahabharat({ onBack }) {
   return (
@@ -21,12 +21,12 @@ export default function Mahabharat({ onBack }) {
       {/* Back Button */}
       <button
         onClick={onBack}
-        className="absolute top-5 left-5 bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md z-10"
+        className=" bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-auto text-center"
       >
         ← Back to Shows
       </button>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-black text-center sm:text-right w-full">
         Mahabharat Moments
       </h2>
 
