@@ -16,20 +16,25 @@ const images = [
 
 export default function Holi_fest({ onBack }) {
   return (
-    <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen relative">
+    <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen">
 
-      {/* Back Button */}
-      <button
-        onClick={onBack}
-        className="absolute top-5 left-5 bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-auto text-center"
-      >
-        ← Back to Shows
-      </button>
+      {/* Header container */}
+      <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4 mb-8">
+        {/* Back Button */}
+        <button
+          onClick={onBack}
+          className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-auto text-center"
+        >
+          ← Back to Shows
+        </button>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-black text-center sm:text-right w-full">
-        Holi Fest
-      </h2>
+        {/* Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-black text-center sm:text-right">
+          Holi Fest
+        </h2>
+      </div>
 
+      {/* Image grid */}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 justify-items-center">
         {images.map((item, index) => (
           <div
