@@ -45,30 +45,36 @@ export default function Regis() {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        const url =
-            'https://script.google.com/macros/s/AKfycbxjRM1sRgRLl5Lcty-ex_wbn43HuPk5wtXhQVYJmZqzfUQDqUroLqCfvGZy_loCmfnS/exec';
+    e.preventDefault();
 
-        fetch(url, {
-            method: 'POST',
-            headers: { 'Content-type': 'application/x-www-form-urlencoded' },
-            body: `Name=${e.target.name.value}&Email=${e.target.email.value}&Phone=${e.target.phone.value}&Mode=${e.target.mode.value}&Course=${e.target.course.value}&Duration=${e.target.duration.value}`,
+    const formData = new URLSearchParams({
+        Name: e.target.name.value,
+        Email: e.target.email.value,
+        Phone: e.target.phone.value,
+        Mode: e.target.mode.value,
+        Course: e.target.course.value,
+        Duration: e.target.duration.value
+    });
+
+    const url = 'https://script.google.com/macros/s/AKfycbyCav9scci1puZL36D5snvl8yWEjvtyTND6zRvcztSe7fiABx4QIR4LJ84WybiZXXw/exec?' + formData.toString();
+
+    fetch(url, { method: 'GET' })
+        .then(res => {
+            if (!res.ok) throw new Error("Network response was not OK");
+            return res.text();
         })
-            .then((res) => {
-                if (!res.ok) throw new Error("Network response was not OK");
-                return res.text();
-            })
-            .then((data) => {
-                alert("Thank you for your interest, we will get back to you soon!!");
-                e.target.reset();
-                setSelectedDuration("");
-                setSelectedPackage("");
-            })
-            .catch((error) => {
-                console.error("Form submission error:", error);
-                alert("Something went wrong. Please try again later.");
-            });
-    };
+        .then(() => {
+            alert("Thank you for your interest, we will get back to you soon!!");
+            e.target.reset();
+            setSelectedDuration("");
+            setSelectedPackage("");
+        })
+        .catch((error) => {
+            console.error("Form submission error:", error);
+            alert("Something went wrong. Please try again later.");
+        });
+};
+
 
     return (
         <div className="bg-slate-500 min-h-screen p-6 flex justify-center items-start gap-6 flex-wrap">
