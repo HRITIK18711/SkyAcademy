@@ -15,20 +15,20 @@ const images = [
 
 export default function Ramaya({ onBack }) {
   return (
-    <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen relative">
+    <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen">
       
-      {/* Back Button */}
-      <button
-        onClick={onBack}
-        className="absolute top-5 left-5 bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md z-10"
-      >
-        ← Back to Shows
-      </button>
-
-      {/* Title */}
-      <h2 className="mt-15 text-xl sm:text-3xl md:text-4xl font-bold text-black text-center mb-10">
-        Ramaya Moments
-      </h2>
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4 mb-8">
+        <button
+          onClick={onBack}
+          className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-auto text-center"
+        >
+          ← Back to Shows
+        </button>
+        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-black text-center sm:text-right w-full">
+          Ramaya Moments
+        </h2>
+      </div>
 
       {/* Responsive Image Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl mx-auto">
