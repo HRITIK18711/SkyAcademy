@@ -45,36 +45,48 @@ export default function Regis() {
     };
 
     const handleSubmit = (e) => {
-    e.preventDefault();
+        e.preventDefault();
 
-    const formData = new URLSearchParams({
-        Name: e.target.name.value,
-        Email: e.target.email.value,
-        Phone: e.target.phone.value,
-        Mode: e.target.mode.value,
-        Course: e.target.course.value,
-        Duration: e.target.duration.value
-    });
+        // Custom validation
+        const name = e.target.name.value.trim();
+        const email = e.target.email.value.trim();
+        const phone = e.target.phone.value.trim();
+        const mode = e.target.mode.value.trim();
+        const course = e.target.course.value.trim();
+        const duration = e.target.duration.value.trim();
 
-    const url = 'https://script.google.com/macros/s/AKfycbyCav9scci1puZL36D5snvl8yWEjvtyTND6zRvcztSe7fiABx4QIR4LJ84WybiZXXw/exec?' + formData.toString();
+        if (!name || !email || !phone || mode === "Select Type" || !course || !duration) {
+            alert("Please fill in all required fields (*) before submitting.");
+            return;
+        }
 
-    fetch(url, { method: 'GET' })
-        .then(res => {
-            if (!res.ok) throw new Error("Network response was not OK");
-            return res.text();
-        })
-        .then(() => {
-            alert("Thank you for your interest, we will get back to you soon!!");
-            e.target.reset();
-            setSelectedDuration("");
-            setSelectedPackage("");
-        })
-        .catch((error) => {
-            console.error("Form submission error:", error);
-            alert("Something went wrong. Please try again later.");
+        const formData = new URLSearchParams({
+            Name: name,
+            Email: email,
+            Phone: phone,
+            Mode: mode,
+            Course: course,
+            Duration: duration
         });
-};
 
+        const url = 'https://script.google.com/macros/s/AKfycbyCav9scci1puZL36D5snvl8yWEjvtyTND6zRvcztSe7fiABx4QIR4LJ84WybiZXXw/exec?' + formData.toString();
+
+        fetch(url, { method: 'GET' })
+            .then(res => {
+                if (!res.ok) throw new Error("Network response was not OK");
+                return res.text();
+            })
+            .then(() => {
+                alert("Thank you for your interest, we will get back to you soon!!");
+                e.target.reset();
+                setSelectedDuration("");
+                setSelectedPackage("");
+            })
+            .catch((error) => {
+                console.error("Form submission error:", error);
+                alert("Something went wrong. Please try again later.");
+            });
+    };
 
     return (
         <div className="bg-slate-500 min-h-screen p-6 flex justify-center items-start gap-6 flex-wrap">
@@ -133,6 +145,7 @@ export default function Regis() {
                         </label>
                         <select
                             name="mode"
+                            required
                             className="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                         >
                             <option>Select Type</option>
@@ -150,8 +163,9 @@ export default function Regis() {
                             value={selectedPackage}
                             onChange={(e) => {
                                 setSelectedPackage(e.target.value);
-                                setSelectedDuration(""); // Reset duration when package changes
+                                setSelectedDuration("");
                             }}
+                            required
                             className="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                         >
                             <option value="">Select Course</option>
@@ -170,6 +184,7 @@ export default function Regis() {
                             name="duration"
                             value={selectedDuration}
                             onChange={(e) => setSelectedDuration(e.target.value)}
+                            required
                             className="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-orange-500"
                         >
                             <option value="">Select Duration</option>
