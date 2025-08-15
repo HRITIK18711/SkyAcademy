@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaTimesCircle, FaCheckCircle, FaCalendarAlt } from "react-icons/fa";
 
 export default function Regis() {
   const [selectedDuration, setSelectedDuration] = useState("");
   const [selectedPackage, setSelectedPackage] = useState("");
+  const navigate = useNavigate();
 
   const availability = [
     { day: "Monday", status: "Open" },
@@ -23,21 +25,14 @@ export default function Regis() {
   };
 
   const packageFees = {
-    "KalaPeeth: Regular Package": {
-      "1 Month": "₹2500",
-    },
+    "KalaPeeth: Regular Package": { "1 Month": "2500" },
     "KalaPeeth: Program Package": {
-      "3 Months": "₹7500",
-      "6 Months": "₹15000",
-      "1 Year": "₹30000",
+      "3 Months": "7500",
+      "6 Months": "15000",
+      "1 Year": "30000",
     },
-    "KalaPeeth: Weekend Package": {
-      "Per Session": "₹1000",
-    },
-    "KalaPeeth: Walk-In Package": {
-      "1.5 Hours": "₹600",
-      "3 Hours": "₹1100",
-    },
+    "KalaPeeth: Weekend Package": { "Per Session": "1000" },
+    "KalaPeeth: Walk-In Package": { "1.5 Hours": "600", "3 Hours": "1100" },
   };
 
   const getFees = () => {
@@ -78,7 +73,20 @@ export default function Regis() {
         return res.text();
       })
       .then(() => {
-        alert("Thank you for your interest, we will get back to you soon!!");
+        alert("Thank you for your interest, Pay Fess!!!");
+
+        // Navigate to NewFees.jsx with details
+        navigate("/newfess", {
+          state: {
+            name,
+            course,
+            duration,
+            totalFees: getFees(),
+            qrCodeUrl: "/images/sample-qr.png", // Replace with actual QR path
+          },
+        });
+
+        // Reset form state
         e.target.reset();
         setSelectedDuration("");
         setSelectedPackage("");
@@ -179,18 +187,11 @@ export default function Regis() {
               className="w-full border border-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               <option value="">Select Course</option>
-              <option value="KalaPeeth: Regular Package">
-                KalaPeeth: Regular Package
-              </option>
-              <option value="KalaPeeth: Program Package">
-                KalaPeeth: Program Package
-              </option>
-              <option value="KalaPeeth: Weekend Package">
-                KalaPeeth: Weekend Package
-              </option>
-              <option value="KalaPeeth: Walk-In Package">
-                KalaPeeth: Walk-In Package
-              </option>
+              {Object.keys(packageDurations).map((pkg) => (
+                <option key={pkg} value={pkg}>
+                  {pkg}
+                </option>
+              ))}
             </select>
           </div>
 

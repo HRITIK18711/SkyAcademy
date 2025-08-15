@@ -12,6 +12,7 @@ import Fees from "./Component/Fees";
 import Service from "./Component/Service";
 import Regis from "./Component/Regis";
 import NewSlider from "./Component/NewSlider";
+import NewFess from "./Component/NewFess";
 import './App.css'
 
 
@@ -36,7 +37,7 @@ function MainContent() {
           <Route path="/service" element={<Service />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/online" element={<Onlineclass />} />
-          
+          <Route path="/newfess" element={<NewFess />} />
           {/* Add more routes if needed */}
         </Routes>
       )}
