@@ -11,6 +11,7 @@ import Contactus from "./Component/Contactus";
 import Fees from "./Component/Fees";
 import Service from "./Component/Service";
 import Regis from "./Component/Regis";
+import NewSlider from "./Component/NewSlider";
 import './App.css'
 
 
@@ -23,7 +24,7 @@ function MainContent() {
       {isHome ? (
         <>
           <HeroSlider /> 
-          <Gallery />
+          <NewSlider />
         </>
       ) : (
         <Routes>
