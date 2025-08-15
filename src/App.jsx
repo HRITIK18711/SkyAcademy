@@ -23,7 +23,7 @@ function MainContent() {
       {isHome ? (
         <>
           <HeroSlider /> 
-          {/* <Card /> */}
+          <Gallery />
         </>
       ) : (
         <Routes>
@@ -35,7 +35,7 @@ function MainContent() {
           <Route path="/service" element={<Service />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/online" element={<Onlineclass />} />
-          <Route path="/onground" element={<Ongroundclass />} />
+          
           {/* Add more routes if needed */}
         </Routes>
       )}
