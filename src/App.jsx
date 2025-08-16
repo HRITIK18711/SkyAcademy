@@ -6,7 +6,6 @@ import Card from "./Component/Card";
 import Aboutus from "./Component/Aboutus";
 import Gallery from "./Component/Gallery";
 import Onlineclass from "./Component/Onlineclass";
-import Ongroundclass from "./Component/Ongroundclass";
 import Contactus from "./Component/Contactus";
 import Fees from "./Component/Fees";
 import Service from "./Component/Service";

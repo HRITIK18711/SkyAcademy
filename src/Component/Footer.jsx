@@ -1,54 +1,91 @@
 import React from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+
 const Footer = () => {
-  return ( 
-    <footer className="bg-black text-white pt-10 pb-6 border-t-4 border-b-cyan-50">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+  return (
+    <footer className="bg-[#050028] text-white pt-12 pb-6 relative">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
+        
+        {/* Left Section */}
+        <div>
+          <h2 className="text-2xl font-bold mb-4">SkyHop</h2>
+          <p className="text-gray-300">
+            Thank you for visiting our official dance portfolio website.
+            Connect with us over socials.
+          </p>
+        </div>
 
-        {/* Logo and Nav Links */}
-        <div className="flex items-center space-x-12">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img src="/Image/logo.jpg" alt="Logo" className="h-10 w-10 rounded-full" />
-            <span className="text-2xl font-bold ml-2">SKY HOP</span>
-          </div>
-
-          {/* Navigation */}
-           <ul className="hidden md:flex space-x-6 uppercase font-medium text-sm ml-50">
-            <li className="hover:text-yellow-400 cursor-pointer">Privacy Policy</li>
-            <li className="hover:text-yellow-400 cursor-pointer">Terms & Condition</li>
+        {/* Quick Links */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
+          <ul className="space-y-3">
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/">Home</Link></li>
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/about">About Us</Link></li>
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/gallery">Gallery</Link></li>
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/contact">Contact US</Link></li>
           </ul>
         </div>
 
-        {/* Contact Button */}
-        <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-5 py-2 rounded-sm mt-5 md:mt-0">
-          <Link to="/contact">CONTACT US</Link>
-        </button>
+        {/* Contact Info */}
+        <div>
+          <h2 className="text-xl font-semibold mb-4">Contact Info</h2>
+          <p className="flex items-center gap-3 mb-3">
+            <FaPhoneAlt className="text-yellow-400" /> +91 7985516210
+          </p>
+          <p className="flex items-center gap-3 mb-3">
+            <FaEnvelope className="text-yellow-400" /> skyhopdance@gmail.com
+          </p>
+          <p className="flex items-center gap-3 mb-5">
+            <FaMapMarkerAlt className="text-yellow-400" /> Noida Sector-66, UP,
+            India - 201301
+          </p>
+
+          {/* Social Links */}
+          <div className="flex space-x-4">
+            <a
+              href="https://www.facebook.com/skyhopakash"
+              className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="#"
+              className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://www.instagram.com/sky_hop?igsh=MTl3aG94MWx4ZDY0dw=="
+              className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://youtube.com/@sykhopprofessionaldanceins5320?feature=shared"
+              className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full"
+            >
+              <FaYoutube />
+            </a>
+          </div>
+        </div>
       </div>
 
-      {/* Social Icons */}
-      <div className="max-w-6xl mx-auto px-4 mt-10 flex justify-center space-x-6">
-        <a href="https://www.facebook.com/skyhopakash" className="bg-gray-800 hover:bg-gray-700 p-3 rounded">
-          <FaFacebookF />
-        </a>
-        <a href="" className="bg-gray-800 hover:bg-gray-700 p-3 rounded">
-          <FaTwitter />
-        </a>
-        <a href="https://www.instagram.com/sky_hop?igsh=MTl3aG94MWx4ZDY0dw==" className="bg-gray-800 hover:bg-gray-700 p-3 rounded">
-          <FaInstagram />
-        </a>
-        <a href="https://youtube.com/@sykhopprofessionaldanceins5320?feature=shared" className="bg-gray-800 hover:bg-gray-700 p-3 rounded">
-          <FaYoutube />
+      {/* Back to top button */}
+      <div className="absolute right-8 bottom-8">
+        <a
+          href="#top"
+          className="bg-yellow-500 hover:bg-yellow-600 text-black p-3 rounded-full"
+        >
+          ↑
         </a>
       </div>
 
-      {/* Horizontal line */}
-      <div className="border-t border-gray-700 mt-8 max-w-4xl mx-auto"></div>
-
-      {/* Footer bottom */}
-      <div className="text-center text-sm text-gray-500 mt-4">
-        <span className="text-yellow-500 font-semibold">Devloped By:</span> Hritik Upadhyay
+      {/* Footer Bottom */}
+      <div className="border-t border-gray-700 mt-10 pt-4 text-center text-sm text-gray-400">
+        <span className="text-yellow-400 font-semibold">Developed By:</span>{" "}
+        Hritik Upadhyay
       </div>
     </footer>
   );
