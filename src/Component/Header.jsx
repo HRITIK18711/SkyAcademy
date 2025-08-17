@@ -18,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="p-4 shadow-xl bg-black relative z-50">
+    <header className="p-4 shadow-xl bg-black ">
       <div className="flex items-center justify-between w-full max-w-[1400px] mx-auto">
         {/* Logo */}
         <div className="w-[100px] md:w-[130px]">

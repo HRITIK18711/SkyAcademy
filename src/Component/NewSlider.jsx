@@ -15,7 +15,7 @@ export default function NewSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 6000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
@@ -36,7 +36,7 @@ export default function NewSlider() {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[75vh] lg:h-[90vh] bg-black overflow-hidden ">
+    <div className="relative w-full h-screen bg-black overflow-hidden">
       {/* Video */}
       <video
         ref={videoRef}
