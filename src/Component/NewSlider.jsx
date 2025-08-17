@@ -15,7 +15,7 @@ export default function NewSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 5000);
+    }, 6000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
