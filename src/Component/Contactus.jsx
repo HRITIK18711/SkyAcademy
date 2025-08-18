@@ -101,8 +101,8 @@ export default function Contactus() {
             And person expresses its emotions.
           </p>
           <div className="text-black space-y-2">
-            <p><strong>Email:</strong> skyhopacademy@gmail.com</p>
-            <p><strong>Phone:</strong> +91 7985516210, +91 7007560973</p>
+            <p><strong>Email:</strong> skyhop22@gmail.com</p>
+            <p><strong>Phone:</strong> +91 7985516210, +91 9219589420</p>
             <p><strong>Location:</strong> House No 1, Dev Nagar Apartment, Thana Rd, near Smileganj, Sector 8, Indira Nagar, Lucknow, Uttar Pradesh 226016</p>
           </div>
         </div>

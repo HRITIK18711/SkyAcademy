@@ -1,6 +1,6 @@
 import React from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaLinkedin , FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -32,14 +32,14 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-semibold mb-4">Contact Info</h2>
           <p className="flex items-center gap-3 mb-3">
-            <FaPhoneAlt className="text-yellow-400" /> +91 7985516210
+            <FaPhoneAlt className="text-yellow-400" /> +91 7985516210 , +91 9219589420
           </p>
           <p className="flex items-center gap-3 mb-3">
-            <FaEnvelope className="text-yellow-400" /> skyhopdance@gmail.com
+            <FaEnvelope className="text-yellow-400" /> skyhop22@gmail.com
           </p>
           <p className="flex items-center gap-3 mb-5">
-            <FaMapMarkerAlt className="text-yellow-400" /> Noida Sector-66, UP,
-            India - 201301
+            <FaMapMarkerAlt className="text-yellow-400" /> House No 1, Dev Nagar Apartment, Thana Rd, near Smileganj, 
+            Sector 8, Indira Nagar, Lucknow, Uttar Pradesh 226016
           </p>
 
           {/* Social Links */}
@@ -51,10 +51,10 @@ const Footer = () => {
               <FaFacebookF />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/sykhop-professional-dance-institute-549389377?utm_source=share&utm_campaign=share"
               className="bg-gray-800 hover:bg-gray-700 p-3 rounded-full"
             >
-              <FaTwitter />
+              <FaLinkedin />
             </a>
             <a
               href="https://www.instagram.com/sky_hop?igsh=MTl3aG94MWx4ZDY0dw=="

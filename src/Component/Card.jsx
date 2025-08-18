@@ -14,7 +14,7 @@ const danceForms = [
   {
     title: "KATHAK",
     description: `Kathak is a classical Indian dance known for its footwork, fast spins, and expressive storytelling, originating in North India.`,
-    image: "/Image/Kathak.png",
+    image: "/Image/13.jpg",
   },
   {
     title: "NEO-CLASSICAL",

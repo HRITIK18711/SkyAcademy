@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Shows from './Shows';
 import Media from './Media';
-import Project from './Project';
+import Achievement from './Achievement';
 
 export default function Gallery() {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -17,8 +17,8 @@ export default function Gallery() {
     return <Shows onBack={() => setSelectedCard(null)} />;
   } else if (selectedCard === 'Media') {
     return <Media onBack={() => setSelectedCard(null)} />;
-  } else if (selectedCard === 'Project') {
-    return <Project onBack={() => setSelectedCard(null)} />;
+  } else if (selectedCard === 'Achievements') {
+    return <Achievement onBack={() => setSelectedCard(null)} />;
   }
 
   return (
