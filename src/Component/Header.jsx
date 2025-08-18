@@ -48,24 +48,26 @@ export default function Header() {
       </div>
 
       {/* Mobile Nav Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-black text-white p-4 absolute top-full left-0 w-full shadow-md">
-          <ul className="flex flex-col gap-4">
-            {links.map((link, index) => (
-              <li key={index}>
-                <Link
-                  to={link.path}
-                  className="flex items-center gap-2 hover:text-[#fc8019]"
-                  onClick={() => setMenuOpen(false)} // close menu on click
-                >
-                  {link.icon}
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+     {/* Mobile Nav Menu */}
+{menuOpen && (
+  <div className="md:hidden bg-black text-white p-4 absolute top-[80px] left-0 w-full shadow-md z-50">
+    <ul className="flex flex-col gap-4">
+      {links.map((link, index) => (
+        <li key={index}>
+          <Link
+            to={link.path}
+            className="flex items-center gap-2 hover:text-[#fc8019]"
+            onClick={() => setMenuOpen(false)} // close menu on click
+          >
+            {link.icon}
+            {link.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
     </header>
   );
 }
