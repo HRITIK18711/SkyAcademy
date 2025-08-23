@@ -21,10 +21,10 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
           <ul className="space-y-3">
-            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/">Home</Link></li>
-            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/about">About Us</Link></li>
-            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/gallery">Gallery</Link></li>
-            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/contact">Contact US</Link></li>
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Home</Link></li>
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>About Us</Link></li>
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/gallery" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Gallery</Link></li>
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Contact US</Link></li>
           </ul>
         </div>
 
