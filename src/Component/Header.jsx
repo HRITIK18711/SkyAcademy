@@ -19,72 +19,70 @@ export default function Header() {
 
   return (
     <header>
-      {/* 🔹 Top Banner with Title */}
-      <div className="bg-black text-center py-6">
-        <div className="flex justify-between items-center max-w-[1400px] mx-auto px-4">
-          {/* Left Logo */}
-          <img
-            src="/Image/logo.jpg"
-            alt="Logo"
-            className="w-35 h-35 rounded-full object-cover"
-          />
+      {/* 🔹 Top Banner */}
+      <div className="bg-black py-4">
+        <div className="max-w-[1400px] mx-auto px-4">
+          {/* ✅ Mobile View: Logo + Title + Menu in 1 row */}
+          <div className="flex items-center justify-between md:hidden">
+            <div className="flex items-center gap-2">
+              <img
+                src="/Image/logo.jpg"
+                alt="Logo"
+                className="w-12 h-12 rounded-full object-cover"
+              />
+              <h1 className="text-white text-sm font-bold leading-tight">
+                SKY HOP <br /> PROFESSIONAL <br /> DANCE INSTITUTE
+              </h1>
+            </div>
 
-          {/* Center Title */}
-          <div className="flex flex-col  text-white">
-            <h1 className="text-2xl italic md:text-5xl mr-20  font-extrabold">
-              SKY HOP PROFESSIONAL DANCE INSTITUTE
-            </h1>
-
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-white text-2xl"
+            >
+              {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
           </div>
 
-          {/* Right Logo (Optional - if you want symmetry like 1st image) */}
-
+          {/* ✅ Desktop View: Logo + Title in center */}
+          <div className="hidden md:flex justify-between items-center">
+            <img
+              src="/Image/logo.jpg"
+              alt="Logo"
+              className="w-20 h-20 rounded-full object-cover"
+            />
+            <h1 className="text-white text-3xl font-extrabold italic text-center">
+              SKY HOP PROFESSIONAL DANCE INSTITUTE
+            </h1>
+            <div className="w-20" /> {/* empty for symmetry */}
+          </div>
         </div>
       </div>
 
       {/* 🔹 Navigation Bar */}
       <div className="bg-black shadow-md">
-        <div className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-4 py-3">
-          {/* Logo Small for Mobile */}
-          <div className="md:hidden w-[60px]">
-            <img src="/Image/logo.jpg" alt="Logo" className="rounded-full" />
-          </div>
-
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex ml-65 -mt-15 gap-6 lg:gap-10 text-white font-semibold text-sm lg:text-base">
-            {links.map((link, index) => (
-              <Link
-                key={index}
-                to={link.path}
-                className="flex items-center gap-2 hover:text-[#fc8019] transition duration-200"
-              >
-                {link.icon}
-                {link.name}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white text-2xl focus:outline-none"
+        <div className="hidden md:flex justify-center gap-10 text-white font-semibold py-3">
+          {links.map((link, index) => (
+            <Link
+              key={index}
+              to={link.path}
+              className="flex items-center gap-2 hover:text-[#fc8019] transition duration-200"
             >
-              {menuOpen ? <FaTimes /> : <FaBars />}
-            </button>
-          </div>
+              {link.icon}
+              {link.name}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile Nav Menu */}
         {menuOpen && (
-          <div className="md:hidden bg-black text-white p-4 absolute top-[160px] left-0 w-full shadow-md z-50">
+          <div className="md:hidden bg-black text-white p-4 absolute top-[90px] left-0 w-full shadow-md z-50">
             <ul className="flex flex-col gap-4">
               {links.map((link, index) => (
                 <li key={index}>
                   <Link
                     to={link.path}
                     className="flex items-center gap-2 hover:text-[#fc8019]"
-                    onClick={() => setMenuOpen(false)} // close menu on click
+                    onClick={() => setMenuOpen(false)}
                   >
                     {link.icon}
                     {link.name}
