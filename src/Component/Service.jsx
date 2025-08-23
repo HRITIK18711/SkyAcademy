@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const servicedata = [
   { title: 'Event choreography'},
   { title: 'Wedding choreography' },
@@ -26,7 +26,7 @@ export default function Service() {
           >
             
             <div className="p-4">
-              <h2 className="text-xl font-semibold text-center text-black">{media.title}</h2>
+              <h2 className="text-xl font-semibold text-center text-black"><Link to="/fees"> {media.title} </Link></h2>
             </div>
           </div>
         ))}
