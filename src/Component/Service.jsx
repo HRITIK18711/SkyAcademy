@@ -12,7 +12,7 @@ const servicedata = [
 
 export default function Service() {
   return (
-    <div className="w-full min-h-screen bg-amber-100 mt-10 py-12 px-4">
+    <div className="w-full min-h-screen bg-amber-100 mt-10 md:mt-40 py-12 px-4">
       {/* Back Button */}
       
 
