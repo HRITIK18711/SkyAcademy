@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { IoHomeOutline } from "react-icons/io5";
 import { FaInfoCircle, FaPhone, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,56 +18,83 @@ export default function Header() {
   ];
 
   return (
-    <header className="p-4 shadow-xl bg-black ">
-      <div className="flex items-center justify-between w-full max-w-[1400px] mx-auto">
-        {/* Logo */}
-        <div className="w-[100px] md:w-[130px]">
-          <img src="/Image/logo.jpg" className="rounded-full" alt="Logo" />
-        </div>
+    <header>
+      {/* 🔹 Top Banner with Title */}
+      <div className="bg-black text-center py-6">
+        <div className="flex justify-between items-center max-w-[1400px] mx-auto px-4">
+          {/* Left Logo */}
+          <img
+            src="/Image/logo.jpg"
+            alt="Logo"
+            className="w-35 h-35 rounded-full object-cover"
+          />
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex gap-6 lg:gap-10 text-white font-semibold text-sm lg:text-base">
-          {links.map((link, index) => (
-            <Link
-              key={index}
-              to={link.path}
-              className="flex items-center gap-2 hover:text-[#fc8019] transition duration-200"
-            >
-              {link.icon}
-              {link.name}
-            </Link>
-          ))}
-        </nav>
+          {/* Center Title */}
+          <div className="flex flex-col  text-white">
+            <h1 className="text-2xl italic md:text-5xl mr-20  font-extrabold">
+              SKY HOP PROFESSIONAL DANCE INSTITUTE
+            </h1>
 
-        {/* Mobile Menu Toggle */}
-        <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-white text-2xl focus:outline-none">
-            {menuOpen ? <FaTimes /> : <FaBars />}
-          </button>
+          </div>
+
+          {/* Right Logo (Optional - if you want symmetry like 1st image) */}
+
         </div>
       </div>
 
-      {/* Mobile Nav Menu */}
-     {/* Mobile Nav Menu */}
-{menuOpen && (
-  <div className="md:hidden bg-black text-white p-4 absolute top-[80px] left-0 w-full shadow-md z-50">
-    <ul className="flex flex-col gap-4">
-      {links.map((link, index) => (
-        <li key={index}>
-          <Link
-            to={link.path}
-            className="flex items-center gap-2 hover:text-[#fc8019]"
-            onClick={() => setMenuOpen(false)} // close menu on click
-          >
-            {link.icon}
-            {link.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
+      {/* 🔹 Navigation Bar */}
+      <div className="bg-black shadow-md">
+        <div className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-4 py-3">
+          {/* Logo Small for Mobile */}
+          <div className="md:hidden w-[60px]">
+            <img src="/Image/logo.jpg" alt="Logo" className="rounded-full" />
+          </div>
 
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex ml-65 -mt-15 gap-6 lg:gap-10 text-white font-semibold text-sm lg:text-base">
+            {links.map((link, index) => (
+              <Link
+                key={index}
+                to={link.path}
+                className="flex items-center gap-2 hover:text-[#fc8019] transition duration-200"
+              >
+                {link.icon}
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Mobile Menu Toggle */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-white text-2xl focus:outline-none"
+            >
+              {menuOpen ? <FaTimes /> : <FaBars />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Nav Menu */}
+        {menuOpen && (
+          <div className="md:hidden bg-black text-white p-4 absolute top-[160px] left-0 w-full shadow-md z-50">
+            <ul className="flex flex-col gap-4">
+              {links.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.path}
+                    className="flex items-center gap-2 hover:text-[#fc8019]"
+                    onClick={() => setMenuOpen(false)} // close menu on click
+                  >
+                    {link.icon}
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
     </header>
   );
 }
