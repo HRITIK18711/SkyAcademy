@@ -15,9 +15,7 @@ export default function Gallery() {
   // Conditional rendering
   if (selectedCard === 'Events') {
     return <Shows onBack={() => setSelectedCard(null)} />;
-  } else if (selectedCard === 'Media') {
-    return <Media onBack={() => setSelectedCard(null)} />;
-  } else if (selectedCard === 'Achievements') {
+  }  else if (selectedCard === 'Achievements') {
     return <Achievement onBack={() => setSelectedCard(null)} />;
   }
 
