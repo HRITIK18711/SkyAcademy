@@ -10,11 +10,12 @@ export default function Header() {
     { icon: <IoHomeOutline />, name: "Home", path: "/" },
     { icon: <FaInfoCircle />, name: "Why Us?", path: "/about" },
     { icon: "", name: "Courses", path: "/course" },
-    { icon: "", name: "Fees Structure", path: "/fees" },
-    { icon: "", name: "Our Services", path: "/service" },
-    { icon: <FaPhone />, name: "Contact Us", path: "/contact" },
     { icon: "", name: "Gallery", path: "/gallery" },
+    { icon: "", name: "Our Services", path: "/service" },
     { icon: "", name: "DANCE ONLINE", path: "/online" },
+    { icon: "", name: "Support Us", path: "/" },
+    { icon: <FaPhone />, name: "Contact Us", path: "/contact" },
+  
   ];
 
   return (
