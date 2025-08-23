@@ -56,7 +56,7 @@ export default function Aboutus() {
           />
         </div>
         <div>
-          <h2 className="text-2xl font-bold mb-4 text-black">About SkyHop</h2>
+          
           <p className="text-black leading-relaxed text-justify">
             {founders[0].description}
           </p>
