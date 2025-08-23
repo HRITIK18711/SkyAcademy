@@ -32,7 +32,7 @@ export default function Fees() {
     const navigate = useNavigate();
 
     return (
-        <div className="relative w-full min-h-screen bg-lime-100 py-12">
+        <div className="relative w-full min-h-screen mt-20 md:mt-45 bg-lime-100 py-12">
             {/* Heading */}
             <h1 className="text-center text-4xl font-bold text-black mb-12">
                 Fees <span className="text-orange-500">Structure</span>

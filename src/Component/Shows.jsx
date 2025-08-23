@@ -37,7 +37,7 @@ export default function Shows({ onBack }) {
   }
 
   return (
-    <div className="w-full min-h-screen bg-neutral-200 py-12 px-4">
+    <div className="w-full min-h-screen bg-neutral-200 py-12 px-4 mt-10">
       {/* Back Button */}
       <div className="mb-6">
         <button

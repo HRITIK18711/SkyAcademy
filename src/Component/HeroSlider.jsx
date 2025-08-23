@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroSlider = () => {
   return (
-    <div className="relative w-full h-190 overflow-hidden bg-black border-b border-cyan-50">
+    <div className="relative w-full mt-20 md:mt-45 h-190 overflow-hidden bg-black border-b border-cyan-50">
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -12,7 +12,7 @@ const HeroSlider = () => {
         muted
         playsInline
       />
-  
+
       {/* Overlay Text */}
       <div className="absolute inset-0 flex items-center justify-start px-8 z-20">
         <div className="text-left max-w-xl">

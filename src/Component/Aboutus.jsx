@@ -38,7 +38,7 @@ const founders = [
 
 export default function Aboutus() {
   return (
-    <div className="relative w-full min-h-screen bg-rose-200 border-b border-cyan-50 overflow-y-auto py-10">
+    <div className="relative mt-20 md:mt-45 w-full min-h-screen bg-rose-200 border-b border-cyan-50 overflow-y-auto py-10">
 
       {/* Heading */}
       <div className="relative z-10 text-center mb-10">

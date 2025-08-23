@@ -24,7 +24,7 @@ export default function Contactus() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-b from-cyan-100 to-white flex flex-col items-center py-10 px-4">
+    <div className="w-full mt-15 md:mt-45 min-h-screen bg-gradient-to-b from-cyan-100 to-white flex flex-col items-center py-10 px-4">
       <h1 className="text-black text-4xl font-bold mb-10 text-center drop-shadow-lg">CONTACT US</h1>
 
       <div className="w-full max-w-6xl flex flex-col lg:flex-row justify-center gap-10">

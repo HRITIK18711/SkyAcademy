@@ -16,7 +16,7 @@ const images = [
 
 export default function Mahabharat({ onBack }) {
   return (
-      <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen relative">
+      <div className="bg-emerald-200 md:mt-45 mt-15 text-white px-4 py-8 min-h-screen relative">
 
       {/* Back Button */}
       <button

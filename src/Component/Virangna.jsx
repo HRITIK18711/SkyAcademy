@@ -15,7 +15,7 @@ const images = [
 
 export default function Virangna({ onBack }) {
   return (
-    <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen">
+    <div className="bg-emerald-200 text-white px-4 mt-15 py-8 min-h-screen">
 
       {/* Header Row */}
       <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4 mb-8">

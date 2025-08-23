@@ -15,7 +15,7 @@ const images = [
 
 export default function Ramaya({ onBack }) { 
   return (
-    <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen">
+    <div className="bg-emerald-200 md:mt-45 mt-15 text-white px-4 py-8 min-h-screen">
       
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4 mb-8">

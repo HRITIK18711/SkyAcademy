@@ -16,7 +16,7 @@ const images = [
 
 export default function Jai_Jawan({ onBack }) {
   return (
-    <div className="bg-emerald-200 text-white px-4 py-8 min-h-screen">
+    <div className="bg-emerald-200 text-white md:mt-45 mt-15 px-4 py-8 min-h-screen">
       
       {/* Header Container */}
       <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4 mb-8">

@@ -22,7 +22,7 @@ export default function Gallery() {
   }
 
   return (
-    <div className="bg-amber-50 min-h-screen p-4 sm:p-8 flex flex-col items-center">
+    <div className="bg-amber-50 md:mt-45 mt-20 min-h-screen p-4 sm:p-8 flex flex-col items-center">
       <h1 className="text-3xl sm:text-4xl font-bold text-black mb-8 text-center">GALLERY</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl px-4">

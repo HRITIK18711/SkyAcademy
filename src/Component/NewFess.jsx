@@ -24,7 +24,7 @@ export default function NewFess() {
   }
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-amber-100 p-4">
+    <div className="flex items-center md:mt-35  justify-center min-h-screen bg-amber-100 p-4">
       <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-lg text-center">
         <h1 className="text-2xl font-bold mb-4">Payment Details</h1>
 

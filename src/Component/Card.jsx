@@ -25,7 +25,7 @@ const danceForms = [
 
 const Card = () => {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-lime-100 border-b border-cyan-50 py-12">
+    <div className="relative w-full mt-20 md:mt-40 min-h-screen overflow-hidden bg-lime-100 border-b border-cyan-50 py-12">
       {/* Heading */}
       <h1 className="text-center text-4xl font-bold text-black mb-12 relative z-10">
         Courses <span className="text-orange-500">Offered</span>

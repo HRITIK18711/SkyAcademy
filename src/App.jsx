@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Header from './Component/Header'
-import Footer from './Component/Footer'
-import HeroSlider from './Component/HeroSlider'
+import Header from './Component/Header';
+import Footer from './Component/Footer';
+import HeroSlider from './Component/HeroSlider';
 import Card from "./Component/Card";
 import Aboutus from "./Component/Aboutus";
 import Gallery from "./Component/Gallery";
@@ -12,23 +12,22 @@ import Service from "./Component/Service";
 import Regis from "./Component/Regis";
 import NewSlider from "./Component/NewSlider";
 import NewFess from "./Component/NewFess";
-import './App.css'
-
+import './App.css';
 
 function MainContent() {
   const location = useLocation();
   const isHome = location.pathname === '/';
 
   return (
-    <>
+    <div className="main-content">
       {isHome ? (
         <>
-          <HeroSlider /> 
+          <HeroSlider />
           <NewSlider />
         </>
       ) : (
         <Routes>
-          <Route path="/course" element={<Card/>} />
+          <Route path="/course" element={<Card />} />
           <Route path="/about" element={<Aboutus />} />
           <Route path="/booking" element={<Regis />} />
           <Route path="/fees" element={<Fees />} />
@@ -37,17 +36,13 @@ function MainContent() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/online" element={<Onlineclass />} />
           <Route path="/newfess" element={<NewFess />} />
-          {/* Add more routes if needed */}
         </Routes>
       )}
-    </>
+    </div>
   );
 }
 
-
 function App() {
-  
-
   return (
     <Router>
       <Header />
@@ -57,4 +52,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

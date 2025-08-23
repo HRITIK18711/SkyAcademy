@@ -18,7 +18,7 @@ export default function Header() {
   ];
 
   return (
-    <header>
+    <header className="fixed top-0 left-0 w-full z-50">
       {/* 🔹 Top Banner */}
       <div className="bg-black py-4">
         <div className="max-w-[1400px] mx-auto px-4">
@@ -75,7 +75,7 @@ export default function Header() {
 
         {/* Mobile Nav Menu */}
         {menuOpen && (
-          <div className="md:hidden bg-black text-white p-4 absolute top-[90px] left-0 w-full shadow-md z-50">
+          <div className="md:hidden bg-black text-white p-4 absolute top-full left-0 w-full shadow-md z-50">
             <ul className="flex flex-col gap-4">
               {links.map((link, index) => (
                 <li key={index}>

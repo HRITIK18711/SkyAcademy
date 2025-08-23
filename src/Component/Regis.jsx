@@ -98,7 +98,7 @@ export default function Regis() {
   };
 
   return (
-    <div className="bg-slate-500 min-h-screen p-4 flex flex-col lg:flex-row justify-center items-start gap-6">
+    <div className="bg-slate-500 md:mt-45 mt-20 min-h-screen p-4 flex flex-col lg:flex-row justify-center items-start gap-6">
       {/* Left Card */}
       <div className="bg-slate-600 rounded-xl shadow-md p-6 w-full lg:w-[350px]">
         <h2 className="text-xl text-white font-bold mb-4">

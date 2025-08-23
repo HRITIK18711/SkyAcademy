@@ -12,7 +12,7 @@ const mediaData = [
 
 export default function Media({ onBack }) {
   return (
-    <div className="w-full min-h-screen bg-neutral-200 py-12 px-4">
+    <div className="w-full min-h-screen md:mt-45 mt-15 bg-neutral-200 py-12 px-4">
       {/* Back Button */}
       <div className="mb-6">
         <button
