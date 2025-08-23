@@ -31,13 +31,13 @@ export default function Header() {
                 className="w-12 h-12 rounded-full object-cover"
               />
               <h1 className="text-white text-sm font-bold leading-tight">
-                SKY HOP <br /> PROFESSIONAL <br /> DANCE INSTITUTE
+                SKY HOP PROFESSIONAL DANCE INSTITUTE
               </h1>
             </div>
 
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="text-white text-2xl"
+              className="text-white text-xl"
             >
               {menuOpen ? <FaTimes /> : <FaBars />}
             </button>
@@ -48,9 +48,9 @@ export default function Header() {
             <img
               src="/Image/logo.jpg"
               alt="Logo"
-              className="w-20 h-20 rounded-full object-cover"
+              className="w-35 h-35 rounded-full object-cover"
             />
-            <h1 className="text-white text-3xl font-extrabold italic text-center">
+            <h1 className="text-white text-5xl -mr-15 font-extrabold italic text-center">
               SKY HOP PROFESSIONAL DANCE INSTITUTE
             </h1>
             <div className="w-20" /> {/* empty for symmetry */}
@@ -60,7 +60,7 @@ export default function Header() {
 
       {/* 🔹 Navigation Bar */}
       <div className="bg-black shadow-md">
-        <div className="hidden md:flex justify-center gap-10 text-white font-semibold py-3">
+        <div className="hidden md:flex justify-center ml-10 -mt-10 gap-10 text-white font-semibold py-3">
           {links.map((link, index) => (
             <Link
               key={index}
