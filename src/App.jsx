@@ -12,6 +12,8 @@ import Service from "./Component/Service";
 import Regis from "./Component/Regis";
 import NewSlider from "./Component/NewSlider";
 import NewFess from "./Component/NewFess";
+import Privacy from "./Component/Privacy";
+import Support from "./Component/Support";
 import './App.css';
 
 function MainContent() {
@@ -36,6 +38,8 @@ function MainContent() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/online" element={<Onlineclass />} />
           <Route path="/newfess" element={<NewFess />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/support" element={<Support />} />
         </Routes>
       )}
     </div>

@@ -13,7 +13,7 @@ export default function Header() {
     { icon: "", name: "Gallery", path: "/gallery" },
     { icon: "", name: "Our Services", path: "/service" },
     { icon: "", name: "DANCE ONLINE", path: "/online" },
-    { icon: "", name: "Support Us", path: "/" },
+    { icon: "", name: "Support Us", path: "/support" },
     { icon: <FaPhone />, name: "Contact Us", path: "/contact" },
 
   ];

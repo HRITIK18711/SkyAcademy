@@ -25,6 +25,7 @@ const Footer = () => {
             <li className="hover:text-yellow-400 cursor-pointer"><Link to="/about" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>About Us</Link></li>
             <li className="hover:text-yellow-400 cursor-pointer"><Link to="/gallery" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Gallery</Link></li>
             <li className="hover:text-yellow-400 cursor-pointer"><Link to="/contact" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Contact US</Link></li>
+            <li className="hover:text-yellow-400 cursor-pointer"><Link to="/privacy" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Privacy Policy</Link></li>
           </ul>
         </div>
 
