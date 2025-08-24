@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Privacy() {
   return (
-    <main className="bg-white min-h-screen">
+    <main className="bg-teal-200 min-h-screen">
       {/* Header offset so fixed header doesn't overlap */}
       <div className="mt-20 md:mt-45" />
 
