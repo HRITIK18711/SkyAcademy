@@ -24,7 +24,7 @@ export default function NewFess() {
   }
 
   return (
-    <div className="flex items-center md:mt-35  justify-center min-h-screen bg-amber-100 p-4">
+    <div className="flex items-center md:mt-20  justify-center min-h-screen bg-amber-100 p-4">
       <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-lg text-center">
         <h1 className="text-2xl font-bold mb-4">Payment Details</h1>
 
@@ -40,17 +40,10 @@ export default function NewFess() {
         {/* QR Code */}
         {data.qrCodeUrl && (
           <div className="flex justify-center mb-6">
-            <img
-              src="/Image/QR.jpg"
-              alt="QR Code"
-              className="w-48 h-48 object-contain border p-2 rounded"
-            />
+            <h2>Please Visit Academy for Feess Payment OR Call On this No:7985516210</h2>
           </div>
         )}
-<h3 className="font-bold text-center mt-4">
-  <span className="font-bold text-red-600">Note:-</span> After Payment Share the Screenshot to Whatsapp on:{" "}
-  <span className="font-bold text-green-600">7985516210</span>
-</h3>
+
         <button
           onClick={() => navigate("/booking")}
           className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600"

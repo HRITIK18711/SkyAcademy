@@ -167,7 +167,6 @@ export default function Regis() {
               className="w-full border border-gray-300 rounded p-3 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               <option>Select Type</option>
-              <option>Online</option>
               <option>Offline</option>
             </select>
           </div>

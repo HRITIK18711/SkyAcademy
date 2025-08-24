@@ -21,11 +21,11 @@ export default function Ramaya({ onBack }) {
       <div className="flex flex-col sm:flex-row items-center sm:justify-between gap-4 mb-8">
         <button
           onClick={onBack}
-          className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-auto text-center"
+          className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-50 text-center"
         >
           ← Back to Shows
         </button>
-        <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-black text-center sm:text-right w-full">
+        <h2 className="text-xl  sm:text-3xl md:text-4xl font-bold text-black text-center sm:text-center w-full">
           Ramaya Moments
         </h2>
       </div>

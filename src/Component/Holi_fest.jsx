@@ -23,15 +23,14 @@ export default function Holi_fest({ onBack }) {
         {/* Back Button */}
         <button
           onClick={onBack}
-          className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-auto text-center"
+          className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-50 text-center"
         >
           ← Back to Shows
         </button>
-
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-black text-center sm:text-right">
-          Holi Fest
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-black text-center sm:text-center  w-full">
+        Holi Fest
+      </h2>
       </div>
 
       {/* Image grid */}

@@ -21,12 +21,12 @@ export default function Mahabharat({ onBack }) {
       {/* Back Button */}
       <button
         onClick={onBack}
-        className=" bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-auto text-center"
+        className=" bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md shadow-md w-full sm:w-auto "
       >
         ← Back to Shows
       </button>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-black text-center sm:text-right w-full">
+      <h2 className="text-3xl md:text-4xl font-bold text-black text-center sm:text-center mb-5 w-full">
         Mahabharat Moments
       </h2>
 
