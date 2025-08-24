@@ -12,7 +12,7 @@ const HeroSlider = () => {
         muted
         playsInline
       />
-
+  
       {/* Overlay Text */}
       <div className="absolute inset-0 flex items-center justify-start px-8 z-20">
         <div className="text-left max-w-xl">

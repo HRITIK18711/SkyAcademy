@@ -15,7 +15,7 @@ export default function Header() {
     { icon: "", name: "DANCE ONLINE", path: "/online" },
     { icon: "", name: "Support Us", path: "/" },
     { icon: <FaPhone />, name: "Contact Us", path: "/contact" },
-  
+
   ];
 
   return (
@@ -83,7 +83,11 @@ export default function Header() {
                   <Link
                     to={link.path}
                     className="flex items-center gap-2 hover:text-[#fc8019]"
-                    onClick={() => setMenuOpen(false)}
+                    onClick={() => {
+                      setMenuOpen(false);
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+
                   >
                     {link.icon}
                     {link.name}
