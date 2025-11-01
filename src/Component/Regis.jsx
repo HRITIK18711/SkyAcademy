@@ -7,6 +7,7 @@ export default function Regis() {
   const [selectedPackage, setSelectedPackage] = useState("");
   const navigate = useNavigate();
 
+  // Academy open days
   const availability = [
     { day: "Monday", status: "Open" },
     { day: "Tuesday", status: "Open" },
@@ -17,22 +18,30 @@ export default function Regis() {
     { day: "Sunday", status: "Close" },
   ];
 
+  // ✅ Packages and durations aligned with Fees.jsx
   const packageDurations = {
-    "KalaPeeth: Regular Package": ["1 Month"],
-    "KalaPeeth: Program Package": ["3 Months", "6 Months", "1 Year"],
-    "KalaPeeth: Weekend Package": ["Per Session"],
-    "KalaPeeth: Walk-In Package": ["1.5 Hours", "3 Hours"],
+    "Regular Batch – Kala Peeth Program": ["1 Month"],
+    "Kala Peeth Program – Package Options": ["3 Months", "6 Months", "1 Year"],
+    "Short-Term Courses": ["3 Months", "6 Months", "1 Year"],
+    "Weekend Classes": ["Per Session"],
+    "Walk-in Plan": ["1.5 Hours", "3 Hours"],
   };
 
+  // ✅ Fees synced from your feeData structure
   const packageFees = {
-    "KalaPeeth: Regular Package": { "1 Month": "2500" },
-    "KalaPeeth: Program Package": {
-      "3 Months": "7500",
-      "6 Months": "15000",
-      "1 Year": "30000",
+    "Regular Batch – Kala Peeth Program": { "1 Month": "₹2,500" },
+    "Kala Peeth Program – Package Options": {
+      "3 Months": "₹7,500 (₹1,000 off)",
+      "6 Months": "₹15,000 (₹2,000 off)",
+      "1 Year": "₹30,000 (₹4,000 off)",
     },
-    "KalaPeeth: Weekend Package": { "Per Session": "1000" },
-    "KalaPeeth: Walk-In Package": { "1.5 Hours": "600", "3 Hours": "1100" },
+    "Short-Term Courses": {
+      "3 Months": "₹9,000",
+      "6 Months": "₹18,000",
+      "1 Year": "₹36,000",
+    },
+    "Weekend Classes": { "Per Session": "₹850" },
+    "Walk-in Plan": { "1.5 Hours": "₹500", "3 Hours": "₹1,000" },
   };
 
   const getFees = () => {
@@ -73,20 +82,18 @@ export default function Regis() {
         return res.text();
       })
       .then(() => {
-        alert("Thank you for your interest, Pay Fess!!!");
+        alert("Thank you for your interest! Proceed to pay your fees.");
 
-        // Navigate to NewFees.jsx with details
         navigate("/newfess", {
           state: {
             name,
             course,
             duration,
             totalFees: getFees(),
-            qrCodeUrl: "/images/sample-qr.png", // Replace with actual QR path
+            qrCodeUrl: "/images/sample-qr.png", // Replace with your actual QR image path
           },
         });
 
-        // Reset form state
         e.target.reset();
         setSelectedDuration("");
         setSelectedPackage("");
@@ -98,24 +105,24 @@ export default function Regis() {
   };
 
   return (
-    <div className="bg-slate-500 md:mt-45 mt-20 min-h-screen p-4 flex flex-col lg:flex-row justify-center items-start gap-6">
-      {/* Left Card */}
+    <div className="bg-slate-500 mt-20 min-h-screen p-4 flex flex-col lg:flex-row justify-center items-start gap-6">
+      {/* Left: Availability */}
       <div className="bg-slate-600 rounded-xl shadow-md p-6 w-full lg:w-[350px]">
         <h2 className="text-xl text-white font-bold mb-4">
-          Opening days for Academy visit
+          Opening Days for Academy Visit
         </h2>
         <ul className="space-y-3">
           {availability.map((item, index) => (
             <li key={index} className="flex items-center gap-2 text-lg">
               {item.status === "Open" ? (
-                <FaCheckCircle className="text-blue-400" />
+                <FaCheckCircle className="text-green-400" />
               ) : (
                 <FaTimesCircle className="text-red-500" />
               )}
               <span className="text-white">{item.day}</span>
               <span
                 className={`ml-2 font-medium ${
-                  item.status === "Open" ? "text-blue-300" : "text-red-400"
+                  item.status === "Open" ? "text-green-300" : "text-red-400"
                 }`}
               >
                 ({item.status})
@@ -125,13 +132,11 @@ export default function Regis() {
         </ul>
       </div>
 
-      {/* Right Card */}
+      {/* Right: Registration Form */}
       <div className="bg-white rounded-xl shadow-md p-6 w-full lg:flex-1">
         <div className="flex items-center gap-2 mb-6 flex-wrap">
           <FaCalendarAlt className="text-2xl text-gray-700" />
-          <h2 className="text-2xl font-bold text-gray-800">
-            Book Regular Classes
-          </h2>
+          <h2 className="text-2xl font-bold text-gray-800">Book Your Classes</h2>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -214,15 +219,13 @@ export default function Regis() {
             </select>
 
             {getFees() && (
-              <p className="mt-2 text-green-700 font-semibold">
-                Fee: {getFees()}
-              </p>
+              <p className="mt-2 text-green-700 font-semibold">Fee: {getFees()}</p>
             )}
           </div>
 
           <button
             type="submit"
-            className="bg-cyan-600 text-white px-6 py-3 rounded-lg hover:bg-cyan-700 transition duration-300 w-full sm:w-auto"
+            className="bg-emerald-700 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition duration-300 w-full sm:w-auto"
           >
             Submit
           </button>
