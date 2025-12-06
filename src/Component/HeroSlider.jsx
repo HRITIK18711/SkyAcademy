@@ -5,8 +5,8 @@ const HeroSlider = () => {
     <div className="relative w-full mt-20 md:mt-45 h-190 overflow-hidden bg-black border-b border-cyan-50">
       {/* Background Video */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src="/Video/Nataraja.mp4"
+        className="absolute inset-0 w-full h-full "
+        src="/Video/skyhop.mp4"
         autoPlay
         loop
         muted
