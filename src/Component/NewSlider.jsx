@@ -36,7 +36,7 @@ export default function NewSlider() {
   }, [currentIndex]);
 
   return (
-    <div className="relative w-full  h-screen bg-black overflow-hidden">
+    <div className="relative w-full  h-screen bg-black overflow-hidden ">
       {/* Video */}
       <video
         ref={videoRef}

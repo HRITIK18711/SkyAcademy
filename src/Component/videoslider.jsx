@@ -1,80 +1,119 @@
-// videoslider.jsx
+// Latest_News.jsx
 import React, { useState, useEffect, useRef } from "react";
 
-const videos = [
-  { src: "/Video/v1.mp4" },
-  { src: "/Video/v2.mp4" },
-  { src: "/Video/v3.mp4" },
+const newsItems = [
+  {
+    img: "/Image/Ramaya_Banner.jpg",
+    title: "✨ Ramayan: An Epic Retold through Dance ✨ #skyhop",
+    link: "https://www.youtube.com/embed/kSAHctrAM_o",
+  },
+  {
+    img: "/Image/dandiya.jpeg",
+    title: "Navratri vibes | full swing | Skyhop Dance Professional.... ",
+    link: "https://www.youtube.com/embed/fWMzX4yhtsc",
+  },
+  {
+    img: "/Image/hip-hop.jpeg",
+    title: "Tune Maari Entriyaan | Satyam Sharma | Yash Gupta...",
+    link: "https://www.youtube.com/embed/Dr02s4Jjasw",
+  },
+  {
+    img: "/Image/bharat.jpg",
+    title: "Thillana 2.0 — Bharatanatyam | Akash Rajpoot | Saumya Verma",
+    link: "https://www.youtube.com/embed/qv0Dzhwoh_Y",
+  }
 ];
 
-export default function videoslider() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const videoRef = useRef(null);
+export default function Videoslider() {
+  const [activeVideo, setActiveVideo] = useState(null);
+  const sliderRef = useRef(null);
 
-  // Auto-slide every 6 seconds
+  // ⭐ CONTINUOUS INFINITE SCROLL LIKE NRITYARAAGA
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 15000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
+    const slider = sliderRef.current;
+    if (!slider) return;
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % videos.length);
-  };
+    let speed = 1; // move speed
+    let scrollInterval;
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + videos.length) % videos.length);
-  };
+    const startScrolling = () => {
+      scrollInterval = setInterval(() => {
+        slider.scrollLeft += speed;
 
-  // Restart video when slide changes
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load();
-      videoRef.current.play().catch(() => {});
-    }
-  }, [currentIndex]);
+        // When reaching end → instantly reset (loop effect)
+        if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+          slider.scrollLeft = 0;
+        }
+      }, 20);
+    };
+
+    startScrolling();
+
+    return () => clearInterval(scrollInterval);
+  }, []);
 
   return (
-    <div className="relative w-full  h-screen bg-black overflow-hidden">
-      {/* Video */}
-      <video
-        ref={videoRef}
-        className="w-full h-full object-center"
-        autoPlay
-        muted
-        loop={false}
-        playsInline
-      >
-        <source src={videos[currentIndex].src} type="video/mp4" />
-      </video>
+    <>
+      {/* MAIN SECTION */}
+      <div className="w-full px-6 py-6 mt-10 bg-black">
+        
+        {/* AUTO MOVING INFINITE SLIDER */}
+        <div
+          ref={sliderRef}
+          className="overflow-x-hidden select-none"
+        >
+          <div className="flex gap-6 w-max pb-4">
+            
+            {/* Duplicate items for infinite loop effect */}
+            {[...newsItems, ...newsItems].map((item, index) => (
+              <div
+                key={index}
+                className="min-w-[380px] bg-black rounded-xl shadow-md overflow-hidden cursor-pointer hover:shadow-xl hover:scale-105 transition"
+                onClick={() => setActiveVideo(item)}
+              >
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-120 h-64 object-center"
+                />
 
-      {/* Navigation buttons */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 text-black rounded-full p-2 sm:p-3 text-xs sm:text-base"
-      >
-        ⬅
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-white/50 hover:bg-white/80 text-black rounded-full p-2 sm:p-3 text-xs sm:text-base"
-      >
-        ➡
-      </button>
+                <div className="p-3">
+                  <p className="text-xl font-semibold text-white text-center">
+                    {item.title}
+                  </p>
+                </div>
+              </div>
+            ))}
 
-      {/* Dots */}
-      <div className="absolute bottom-2 sm:bottom-4 w-full flex justify-center gap-1 sm:gap-2">
-        {videos.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer ${
-              index === currentIndex ? "bg-white" : "bg-gray-400"
-            }`}
-          ></div>
-        ))}
+          </div>
+        </div>
       </div>
-    </div>
+
+      {/* FULLSCREEN POPUP */}
+      {activeVideo && (
+        <div className="fixed inset-0 bg-black bg-opacity-90 flex justify-center items-center z-50 px-4">
+          <div className="relative w-[95%] md:w-[70%] h-[80%] bg-black rounded-xl shadow-xl">
+            
+            {/* CLOSE BUTTON */}
+            <button
+              onClick={() => setActiveVideo(null)}
+              className="absolute -top-10 right-0 text-white text-4xl font-bold"
+            >
+              ✕
+            </button>
+
+            <iframe
+              src={activeVideo.link}
+              title={activeVideo.title}
+              className="w-full h-full rounded-xl"
+              frameBorder="0"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            ></iframe>
+
+          </div>
+        </div>
+      )}
+    </>
   );
 }

@@ -14,6 +14,7 @@ import NewSlider from "./Component/NewSlider";
 import NewFess from "./Component/NewFess";
 import Privacy from "./Component/Privacy";
 import Support from "./Component/Support";
+import Videoslider from "./Component/videoslider";   // IMPORTANT: Capital letter
 import './App.css';
 
 function MainContent() {
@@ -26,6 +27,7 @@ function MainContent() {
         <>
           <HeroSlider />
           <NewSlider />
+          <Videoslider /> {/* 👈 Added here */}
         </>
       ) : (
         <Routes>
