@@ -73,7 +73,7 @@ export default function Regis() {
     });
 
     const url =
-      "https://script.google.com/macros/s/AKfycbzzsbRriQel2WGe2wTC-sjOOXeDJjQyRM3RF09c_Y4PpaKxeeeFjQsE3h-32F31NTV7/exec?" +
+      "https://script.google.com/macros/s/AKfycbyL9U1PKs23uaBRhrCTtzFo7-qwwFa0K3-RN4mQrekZoaVL_MZv31I5JDWLW4jbbKkJ/exec?" +
       formData.toString();
 
     fetch(url, { method: "GET" })

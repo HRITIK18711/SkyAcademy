@@ -5,7 +5,7 @@ export default function Contactus() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const url =
-      'https://script.google.com/macros/s/AKfycbz9gqjuLkidH9Z6RqiGAcw3ZQ5yy1MlaHLuZ5NVAI3g8yqrqtkDSpwVJ2iv0kebzWzX/exec';
+      'https://script.google.com/macros/s/AKfycbwJY7uHpPDwbAojg4twJ3J36QkegdQE8_wQcZ5ZWhIDbBeRsRUQwNgA1QHDOyXpqpyBRA/exec';
 
     fetch(url, {
       method: 'POST',
