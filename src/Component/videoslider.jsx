@@ -3,10 +3,10 @@ import React, { useState, useEffect, useRef } from "react";
 
 const newsItems = [
   {
-    img: "/Image/Ramaya_Banner.jpg",
-    title: "✨ Ramayan: An Epic Retold through Dance ✨ #skyhop",
-    link: "https://youtu.be/QxChOaJzxVc?si=zy716P5UVG0N3UFi",
-  },
+  img: "/Image/Ramaya_Banner.jpg",
+  title: "✨ Ramayan: An Epic Retold through Dance ✨ #skyhop",
+  link: "https://www.youtube.com/embed/QxChOaJzxVc",
+},
   {
     img: "/Image/dandiya.jpeg",
     title: "Navratri vibes | full swing | Skyhop Dance Professional.... ",
