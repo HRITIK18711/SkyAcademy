@@ -5,7 +5,7 @@ const newsItems = [
   {
     img: "/Image/Ramaya_Banner.jpg",
     title: "✨ Ramayan: An Epic Retold through Dance ✨ #skyhop",
-    link: "https://www.youtube.com/embed/kSAHctrAM_o",
+    link: "https://youtu.be/QxChOaJzxVc?si=zy716P5UVG0N3UFi",
   },
   {
     img: "/Image/dandiya.jpeg",
